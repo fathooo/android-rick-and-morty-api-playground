@@ -37,7 +37,7 @@ class CharacterAdapter( var characters: List<Result>,
     class ViewHolder(private val binding: ItemLayoutBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(character: Result){
             binding.textTitle.text = character.name
-            binding.textDescription.text = character.species
+//            binding.textDescription.text = character.species
             Glide.with(binding.root.context).load(character.image).into(binding.imageCover)
         }
     }
