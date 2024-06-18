@@ -1,4 +1,4 @@
-package com.fathooo.myapp
+package com.fathooo.myapp.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,13 +9,12 @@ import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.lifecycleScope
 import com.fathooo.myapp.databinding.MainActivityBinding
 import androidx.recyclerview.widget.GridLayoutManager
+import com.fathooo.myapp.R
 import com.fathooo.myapp.controller.CharacterClient
-import com.fathooo.myapp.model.Characters
 import com.fathooo.myapp.model.Result
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import kotlin.concurrent.thread
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,7 +49,7 @@ class MainActivity : ComponentActivity() {
         val characterId = character.id
         Log.d("CharacterId", characterId.toString())
         Toast.makeText(this, character.name, Toast.LENGTH_SHORT).show()
-        val intel = Intent(this, CharacterId::class.java)
+        val intel = Intent(this, CharacterActivity::class.java)
         intel.putExtra("characterId", characterId)
         startActivity(intel)
 

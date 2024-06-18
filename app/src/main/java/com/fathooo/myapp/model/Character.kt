@@ -1,6 +1,6 @@
 package com.fathooo.myapp.model
 
-data class CharacterId(
+data class Character(
     val created: String,
     val episode: List<String>,
     val gender: String,

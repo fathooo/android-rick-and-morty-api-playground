@@ -1,4 +1,4 @@
-package com.fathooo.myapp
+package com.fathooo.myapp.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -13,7 +13,8 @@ interface CharacterClickListener{
 }
 
 class CharacterAdapter( var characters: List<Result>,
-                       private val characterClickListener: CharacterClickListener): RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
+                       private val characterClickListener: CharacterClickListener
+): RecyclerView.Adapter<CharacterAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = ItemLayoutBinding.inflate(

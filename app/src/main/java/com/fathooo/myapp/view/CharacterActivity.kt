@@ -1,7 +1,6 @@
-package com.fathooo.myapp
+package com.fathooo.myapp.view
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.lifecycle.lifecycleScope
 import com.bumptech.glide.Glide
@@ -10,7 +9,7 @@ import com.fathooo.myapp.databinding.ActivityCharacterIdBinding
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-class CharacterId : ComponentActivity() {
+class CharacterActivity : ComponentActivity() {
 
     companion object {
         const val CHARACTER_ID = "characterId"
